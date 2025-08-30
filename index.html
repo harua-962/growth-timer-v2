@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グロウス・タイマー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="theme-wrapper">
+        <button id="prev-theme-btn" class="theme-switcher">＜</button>
+
+        <div class="ui-elements">
+            <h1 id="app-title"></h1>
+            <div class="timer-display">
+                <span id="time">00:00</span>
+            </div>
+            <div class="controls">
+                <input type="number" id="minutes-input" value="25" min="1">
+                <span>分</span>
+                <button id="start-btn">スタート</button>
+                <button id="reset-btn">リセット</button>
+            </div>
+            <p id="message"></p>
+        </div>
+
+        <div class="growth-display">
+            <img id="plant-image" src="" alt="成長する植物">
+        </div>
+
+        <button id="next-theme-btn" class="theme-switcher">＞</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
