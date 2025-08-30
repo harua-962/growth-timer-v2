@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalSeconds = 0;
     let secondsLeft = 0;
     let currentThemeIndex = 0;
-    // ★変更点★ 現在表示されているステージを記憶する変数を追加
+    
     let currentStageIndex = -1; 
 
     function switchTheme(index) {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateGrowth();
     }
 
-    // ★変更点★ ステージが変わった時だけアニメーションを実行するように修正
+    
     function updateGrowth() {
         const theme = themes[currentThemeIndex];
         const progress = totalSeconds > 0 ? (totalSeconds - secondsLeft) / totalSeconds : 0;
@@ -130,9 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
             else if (progress >= 0.3) { stageIndex = 1; }
         }
         
-        // ★新しいステージ番号が現在のステージ番号と違う場合だけ、処理を実行
+        
         if (stageIndex !== currentStageIndex) {
-            currentStageIndex = stageIndex; // 現在のステージ番号を更新
+            currentStageIndex = stageIndex; 
             
             const newImageSrc = theme.images[stageIndex];
             const newSize = theme.sizes[stageIndex];
@@ -154,12 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
         timeDisplay.textContent = '00:00';
         messageDisplay.textContent = '';
         
-        // ★変更点★ ステージ番号もリセット
+        
         currentStageIndex = 0; 
         
         plantImage.src = themes[currentThemeIndex].images[0];
         plantImage.style.maxHeight = themes[currentThemeIndex].sizes[0];
-        plantImage.style.opacity = 1; // 念のため透明度を戻す
+        plantImage.style.opacity = 1; 
         
         startButton.disabled = false;
         minutesInput.disabled = false;
